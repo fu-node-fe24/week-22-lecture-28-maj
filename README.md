@@ -1,1 +1,1 @@
-# wee-22-lecture-28-maj
+# week-22-lecture-28-maj
