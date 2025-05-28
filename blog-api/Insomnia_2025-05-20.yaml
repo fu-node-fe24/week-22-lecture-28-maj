@@ -1,0 +1,248 @@
+type: collection.insomnia.rest/5.0
+name: BlogPost API
+meta:
+  id: wrk_519aa33df6f34da79e1652c4d01a73b9
+  created: 1747684779893
+  modified: 1747684779893
+collection:
+  - name: Keys
+    meta:
+      id: fld_5231dab0c0154345b6336f00dae285a3
+      created: 1747684787046
+      modified: 1747684787046
+      sortKey: -1747684787046
+    children:
+      - url: http://localhost:8080/api/keys
+        name: GET api key
+        meta:
+          id: req_aabde8981c6e4b7fada33e1d8a2c3415
+          created: 1747684802100
+          modified: 1747686446920
+          isPrivate: false
+          sortKey: -1747684802100
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Users
+    meta:
+      id: fld_27d0cb7b6c3b415091f4ac6c624795b6
+      created: 1747684792235
+      modified: 1747684792235
+      sortKey: -1747684792235
+    children:
+      - url: http://localhost:8080/api/auth/register
+        name: POST register
+        meta:
+          id: req_9f7d05878c86469e86f5dfe131a99b79
+          created: 1747684828243
+          modified: 1747723321979
+          isPrivate: false
+          sortKey: -1747684828243
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"username" : "jespernyberg",
+            	"password" : "jespernyberg"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/auth/login
+        name: POST login
+        meta:
+          id: req_987aabb6e0534637a4e28a1854404490
+          created: 1747684831189
+          modified: 1747689468666
+          isPrivate: false
+          sortKey: -1747684831189
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"username" : "jespernyberg",
+            	"password" : "jespernyberg"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/auth/logout
+        name: GET logout
+        meta:
+          id: req_21e93395beda4a8ba6f7865f7ef77202
+          created: 1747684874555
+          modified: 1747688896218
+          isPrivate: false
+          sortKey: -1747684874555
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Posts
+    meta:
+      id: fld_0e3ec8acc1f743108527b7b68e221f15
+      created: 1747684798950
+      modified: 1747684798950
+      sortKey: -1747684798950
+    children:
+      - url: http://localhost:8080/api/posts
+        name: DELETE post by POSTID
+        meta:
+          id: req_4695977b2ec44c40b903afa88790edb0
+          created: 1747684890097
+          modified: 1747685006142
+          isPrivate: false
+          sortKey: -1747684890097
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/posts
+        name: PUT post by POSTID
+        meta:
+          id: req_f57b1547d8e34d48a18de8318f369fc4
+          created: 1747684906265
+          modified: 1747685001438
+          isPrivate: false
+          sortKey: -1747684906265
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/posts?key=blog-kkkkk
+        name: POST new post
+        meta:
+          id: req_406e7d0200d1492c96b1595e7a667222
+          created: 1747684916005
+          modified: 1747690276272
+          isPrivate: false
+          sortKey: -1747684916005
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"title" : "Fuck my life",
+            	"text" : "Jag hatar verkligen alla som är i vägen heeeela tiden!!!!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/posts
+        name: GET posts by USERID
+        meta:
+          id: req_f2c5383d1065449a8a6b450e5a77f094
+          created: 1747684927403
+          modified: 1747684988408
+          isPrivate: false
+          sortKey: -1747684927403
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/posts?key=blog-kkkkk
+        name: GET posts
+        meta:
+          id: req_6656271bbda04e6bac71c0cd90ecb03d
+          created: 1747684936972
+          modified: 1747689757347
+          isPrivate: false
+          sortKey: -1747684936972
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5e2c410ee45a832aa4dd9962f7609c3209fc46b4
+    created: 1747684779897
+    modified: 1747684779897
+environments:
+  name: Base Environment
+  meta:
+    id: env_5e2c410ee45a832aa4dd9962f7609c3209fc46b4
+    created: 1747684779895
+    modified: 1747684779895
+    isPrivate: false
